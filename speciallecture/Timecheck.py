@@ -1,6 +1,6 @@
 class Timecheck:
     def __init__(self):
-        return "test"
+        return self
 
     def check(time, start_time, end_time)->str:
         if start_time <= end_time and start_time <= time < end_time:
