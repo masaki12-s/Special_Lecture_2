@@ -1,6 +1,3 @@
-if __name__ == "__main__":
-
-
 import unittest
 # import os,sys
 # sys.path.append(os.path.join("..","speciallecture"))
