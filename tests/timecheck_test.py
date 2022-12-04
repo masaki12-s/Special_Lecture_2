@@ -1,0 +1,9 @@
+if __name__ == "__main__":
+    print("testcase1 'OK':"+(check(0, 0, 23)))
+    print("testcase2 'NG':"+(check(23, 0, 23)))
+    print("testcase3 'OK':"+(check(4, 0, 23)))
+    print("testcase4 'NG':"+(check(4, 15, 23)))
+    print("testcase5 'OK':"+(check(0, 23, 5)))
+    print("testcase6 'NG':"+(check(5, 23, 5)))
+    print("testcase7 'OK':"+(check(23, 23, 5)))
+    print("testcase8 'NG':"+(check(22, 23, 5)))
