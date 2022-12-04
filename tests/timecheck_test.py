@@ -1,9 +1,36 @@
 if __name__ == "__main__":
-    print("testcase1 'OK':"+(check(0, 0, 23)))
-    print("testcase2 'NG':"+(check(23, 0, 23)))
-    print("testcase3 'OK':"+(check(4, 0, 23)))
-    print("testcase4 'NG':"+(check(4, 15, 23)))
-    print("testcase5 'OK':"+(check(0, 23, 5)))
-    print("testcase6 'NG':"+(check(5, 23, 5)))
-    print("testcase7 'OK':"+(check(23, 23, 5)))
-    print("testcase8 'NG':"+(check(22, 23, 5)))
+
+
+import unittest
+# import os,sys
+# sys.path.append(os.path.join("..","speciallecture"))
+from speciallecture.Timecheck import Timecheck
+
+class TestTimecheck(unittest.TestCase):
+    def __init__(self, methodName: str = ...) -> None:
+        super().__init__(methodName)
+        self.timecheck = Timecheck()
+    def test_read1(self):
+        
+        self.assertEqual("OK", self.timecheck.check(0, 0, 22))
+
+    def test_read2(self):
+        self.assertEqual("NG", self.timecheck.check(22, 0, 22))
+
+    def test_read3(self):
+        self.assertEqual("NG", self.timecheck.check(1, 2, 22))
+
+    def test_read4(self):
+        self.assertEqual("NG", self.timecheck.check(23, 2, 22))
+    
+    def test_read5(self):
+        self.assertEqual("OK", self.timecheck.check(0, 22, 5))
+    
+    def test_read6(self):
+        self.assertEqual("NG", self.timecheck.check(5, 22, 5))
+    
+    def test_read7(self):
+        self.assertEqual("OK", self.timecheck.check(22, 22, 5))
+    
+    def test_read8(self):
+        self.assertEqual("NG", self.timecheck.check(23, 22, 5))
