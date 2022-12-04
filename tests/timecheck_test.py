@@ -4,11 +4,10 @@ import unittest
 from speciallecture.Timecheck import Timecheck
 
 class TestTimecheck(unittest.TestCase):
-    def __init__(self, methodName: str = ...) -> None:
-        super().__init__(methodName)
+    def __init__(self) -> None:
         self.timecheck = Timecheck()
-    def test_read1(self):
         
+    def test_read1(self):
         self.assertEqual("OK", self.timecheck.check(0, 0, 22))
 
     def test_read2(self):
